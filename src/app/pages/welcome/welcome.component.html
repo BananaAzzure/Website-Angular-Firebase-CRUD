@@ -1,0 +1,22 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="welcome-container">
+    <header class="header">
+        <h1>{{ title }}</h1>
+        <p class="subtitle">{{ subtitle }}</p>
+    </header>
+
+    <main class="content">
+        <div class="feature-card" *ngFor="let feature of features">
+            <i class="material-icons">{{ feature.icon }}</i>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.description }}</p>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <button (click)="getStarted()" class="cta-button">
+            Get Started
+        </button>
+    </section>
+</div>

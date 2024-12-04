@@ -1,0 +1,18 @@
+<div class="table-container">
+    <nz-table [nzData]="(listOfData$ | async) ?? []" [nzBordered]="true" [nzSize]="'middle'" [nzShowPagination]="true">
+        <thead>
+            <tr>
+                <th nzWidth="25%">Username</th>
+                <th nzWidth="35%">Email</th>
+                <th nzWidth="40%">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of (listOfData$ | async) ?? []">
+                <td>{{ data.username }}</td>
+                <td>{{ data.email }}</td>
+                <td>{{ data.password }}</td>
+            </tr>
+        </tbody>
+    </nz-table>
+</div>
